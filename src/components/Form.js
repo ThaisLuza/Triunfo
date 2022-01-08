@@ -23,7 +23,7 @@ class Form extends Component {
         <label htmlFor="nomeInput">
           Nome
           <input
-            name="nome"
+            name="cardName"
             id="nomeInput"
             type="text"
             data-testid="name-input"
@@ -34,7 +34,7 @@ class Form extends Component {
         <label htmlFor="descricaoInput">
           Descrição
           <textarea
-            name="descricao"
+            name="cardDescription"
             id="descricaoInput"
             data-testid="description-input"
             value={ cardDescription }
@@ -44,7 +44,7 @@ class Form extends Component {
         <label htmlFor="attr1Input">
           Atributo 1
           <input
-            name="atributo1"
+            name="cardAttr1"
             id="attr1Input"
             type="number"
             data-testid="attr1-input"
@@ -55,7 +55,7 @@ class Form extends Component {
         <label htmlFor="attr2Input">
           Atributo 2
           <input
-            name="atributo2"
+            name="cardAttr2"
             id="attr2Input"
             type="number"
             data-testid="attr2-input"
@@ -66,7 +66,7 @@ class Form extends Component {
         <label htmlFor="attr3Input">
           Atributo 3
           <input
-            name="atributo3"
+            name="cardAttr3"
             id="attr3Input"
             type="number"
             data-testid="attr3-input"
@@ -77,7 +77,7 @@ class Form extends Component {
         <label htmlFor="imageInput">
           Imagem
           <input
-            name="imagem"
+            name="icardImage"
             id="imageInput"
             type="text"
             data-testid="image-input"
@@ -88,21 +88,21 @@ class Form extends Component {
         <label htmlFor="rareInput">
           Raridade
           <select
-            name="raridade"
+            name="cardRare"
             id="rareInput"
             data-testid="rare-input"
             value={ cardRare }
             onChange={ onInputChange }
           >
-            <option>normal</option>
-            <option>raro</option>
-            <option>muito raro</option>
+            <option value="normal">normal</option>
+            <option value="raro">raro</option>
+            <option value="muito raro">muito raro</option>
           </select>
         </label>
         <label htmlFor="trunfoInput">
           Super Trybe Trunfo
           <input
-            name="trunfo"
+            name="cardTrunfo"
             id="trunfoInput"
             type="checkbox"
             data-testid="trunfo-input"
