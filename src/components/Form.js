@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
+import '../style/Form.css';
 
 class Form extends Component {
   render() {
@@ -18,7 +19,7 @@ class Form extends Component {
       onSaveButtonClick,
     } = this.props;
     return (
-      <form>
+      <form className="formulario">
         <h1>Adicionar nova carta</h1>
         <label htmlFor="nomeInput">
           Nome
@@ -50,6 +51,8 @@ class Form extends Component {
             data-testid="attr1-input"
             value={ cardAttr1 }
             onChange={ onInputChange }
+            max={ 90 }
+            min={ 1 }
           />
         </label>
         <label htmlFor="attr2Input">
@@ -61,6 +64,8 @@ class Form extends Component {
             data-testid="attr2-input"
             value={ cardAttr2 }
             onChange={ onInputChange }
+            max={ 90 }
+            min={ 1 }
           />
         </label>
         <label htmlFor="attr3Input">
@@ -72,12 +77,14 @@ class Form extends Component {
             data-testid="attr3-input"
             value={ cardAttr3 }
             onChange={ onInputChange }
+            max={ 90 }
+            min={ 1 }
           />
         </label>
         <label htmlFor="imageInput">
           Imagem
           <input
-            name="icardImage"
+            name="cardImage"
             id="imageInput"
             type="text"
             data-testid="image-input"
@@ -111,7 +118,7 @@ class Form extends Component {
           />
         </label>
         <button
-          type="submit"
+          type="button"
           data-testid="save-button"
           disabled={ isSaveButtonDisabled }
           onClick={ onSaveButtonClick }
