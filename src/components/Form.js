@@ -13,7 +13,7 @@ class Form extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
-      // hasTrunfo,
+      hasTrunfo,
       isSaveButtonDisabled,
       onInputChange,
       onSaveButtonClick,
@@ -106,17 +106,21 @@ class Form extends Component {
             <option value="muito raro">muito raro</option>
           </select>
         </label>
-        <label htmlFor="trunfoInput">
-          Super Trybe Trunfo
-          <input
-            name="cardTrunfo"
-            id="trunfoInput"
-            type="checkbox"
-            data-testid="trunfo-input"
-            checked={ cardTrunfo }
-            onChange={ onInputChange }
-          />
-        </label>
+        <div>
+          { hasTrunfo ? (<span>Você já tem um Super Trunfo em seu baralho</span>)
+            : (
+              <label htmlFor="trunfoInput">
+                Super Trybe Trunfo
+                <input
+                  name="cardTrunfo"
+                  id="trunfoInput"
+                  type="checkbox"
+                  data-testid="trunfo-input"
+                  checked={ cardTrunfo }
+                  onChange={ onInputChange }
+                />
+              </label>)}
+        </div>
         <button
           type="button"
           data-testid="save-button"
@@ -139,7 +143,7 @@ Form.propTypes = {
   cardImage: propTypes.string.isRequired,
   cardRare: propTypes.string.isRequired,
   cardTrunfo: propTypes.bool.isRequired,
-  // hasTrunfo: propTypes.bool.isRequired,
+  hasTrunfo: propTypes.bool.isRequired,
   isSaveButtonDisabled: propTypes.bool.isRequired,
   onInputChange: propTypes.func.isRequired,
   onSaveButtonClick: propTypes.func.isRequired,
