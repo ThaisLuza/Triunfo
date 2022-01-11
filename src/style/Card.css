@@ -1,6 +1,16 @@
 .carta {
-  background-color: lightblue;
+  align-items: center;
+  background-color: #046466;
   box-shadow: gray 3px 3px;
+  color: white;
+  display: flex;
+  flex-direction: column;
   margin-top: 50px;
-  width: 40vw;
+  width: 20vw;
+}
+
+img {
+  height: 100px;
+  object-fit: cover;
+  width: 100px;
 }

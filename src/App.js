@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
+import './style/App.css';
+import foto from './images/imagem.webp';
 
 class App extends React.Component {
   constructor() {
@@ -11,7 +13,7 @@ class App extends React.Component {
       cardAttr1: 0,
       cardAttr2: 0,
       cardAttr3: 0,
-      cardImage: '',
+      cardImage: foto,
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
@@ -124,31 +126,35 @@ class App extends React.Component {
     } = this.state;
     return (
       <div>
-        <h1>Tryunfo</h1>
-        <Form
-          onInputChange={ this.onInputChange }
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-          isSaveButtonDisabled={ isSaveButtonDisabled }
-          hasTrunfo={ hasTrunfo }
-          onSaveButtonClick={ this.onSaveButtonClick }
-        />
-        <Card
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-        />
+        <main>
+          <Form
+            onInputChange={ this.onInputChange }
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+            isSaveButtonDisabled={ isSaveButtonDisabled }
+            hasTrunfo={ hasTrunfo }
+            onSaveButtonClick={ this.onSaveButtonClick }
+          />
+          <div className="preVisualizacao">
+            <h1>Pré-visualização</h1>
+            <Card
+              cardName={ cardName }
+              cardDescription={ cardDescription }
+              cardAttr1={ cardAttr1 }
+              cardAttr2={ cardAttr2 }
+              cardAttr3={ cardAttr3 }
+              cardImage={ cardImage }
+              cardRare={ cardRare }
+              cardTrunfo={ cardTrunfo }
+            />
+          </div>
+        </main>
         {cards.map((item) => (
           item ? <Card
             cardName={ item.cardName }
