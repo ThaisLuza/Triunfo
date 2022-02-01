@@ -155,18 +155,20 @@ class App extends React.Component {
             />
           </div>
         </main>
-        {cards.map((item) => (
-          item ? <Card
-            cardName={ item.cardName }
-            cardDescription={ item.cardDescription }
-            cardAttr1={ item.cardAttr1 }
-            cardAttr2={ item.cardAttr2 }
-            cardAttr3={ item.cardAttr3 }
-            cardImage={ item.cardImage }
-            cardRare={ item.cardRare }
-            cardTrunfo={ item.cardTrunfo }
-          /> : <> </>
-        ))}
+        <div className="todasCartas">
+          {cards.map((item) => (
+            item ? <Card
+              cardName={ item.cardName }
+              cardDescription={ item.cardDescription }
+              cardAttr1={ item.cardAttr1 }
+              cardAttr2={ item.cardAttr2 }
+              cardAttr3={ item.cardAttr3 }
+              cardImage={ item.cardImage }
+              cardRare={ item.cardRare }
+              cardTrunfo={ item.cardTrunfo }
+            /> : <> </>
+          ))}
+        </div>
       </div>
     );
   }

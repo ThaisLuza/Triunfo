@@ -23,10 +23,24 @@ class Card extends Component {
           src={ cardImage }
         />
         <p data-testid="description-card">{cardDescription}</p>
-        <span data-testid="attr1-card">{cardAttr1}</span>
-        <span data-testid="attr2-card">{cardAttr2}</span>
-        <span data-testid="attr3-card">{cardAttr3}</span>
-        <span data-testid="rare-card">{cardRare}</span>
+        <div className="atributos">
+          <span data-testid="attr1-card">
+            Atributo 1..........
+            {cardAttr1}
+          </span>
+          <span data-testid="attr2-card">
+            Atributo 2..........
+            {cardAttr2}
+          </span>
+          <span data-testid="attr3-card">
+            Atributo 3..........
+            {cardAttr3}
+          </span>
+          <span data-testid="rare-card">
+            Raridade:
+            {cardRare}
+          </span>
+        </div>
         {cardTrunfo && <span data-testid="trunfo-card">Super Trunfo</span>}
       </div>
     );

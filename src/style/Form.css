@@ -38,7 +38,7 @@ select {
 }
 
 button {
-  background-color: #003be5;
+  background-color: #046466;
   border: none;
   color: white;
   display: inline-block;
@@ -46,6 +46,7 @@ button {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
+  border-radius: 10px;
 }
 
 .border3 {

@@ -10,3 +10,14 @@ main {
   flex-direction: column;
   width: 50vw;
 }
+
+.todasCartas {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+  justify-content: space-between;
+}
+
+.preVisualizacao h1 {
+  margin-top: 53px;
+}
