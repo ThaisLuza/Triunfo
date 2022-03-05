@@ -9,12 +9,13 @@ main {
   display: flex;
   flex-direction: column;
   width: 50vw;
+  height: 100vh;
+  padding-top: 50px;
 }
 
 .todasCartas {
   display: flex;
   flex-wrap: wrap;
-  margin: 15px;
   justify-content: space-evenly;
 }
 
