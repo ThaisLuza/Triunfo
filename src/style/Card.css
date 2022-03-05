@@ -1,0 +1,47 @@
+.carta {
+  align-items: center;
+  background-color: #046466;
+  box-shadow: gray 3px 3px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 20vw;
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px solid white;
+}
+
+.carta span {
+  padding: 8px;
+}
+
+.carta h2 {
+  background-color: #023031;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+
+}
+
+.atributos {
+  background-color: white;
+  color: #444955;
+  display: flex;
+  flex-direction: column;
+  width: 18vw;
+  align-items: center;
+  border-radius: 10px;
+}
+
+
+img {
+  height: 200px;
+  object-fit: cover;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.espaco {
+  height: 70px;
+}

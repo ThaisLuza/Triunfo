@@ -1,0 +1,23 @@
+main {
+  display: flex;
+}
+
+.preVisualizacao {
+  align-items: center;
+  background-color: #023031;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.todasCartas {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+  justify-content: space-evenly;
+}
+
+.preVisualizacao h1 {
+  margin-top: 53px;
+}
